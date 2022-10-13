@@ -44,7 +44,7 @@ class MultipleUsers:
         request = requests.post(url, json=jsonArray)
         requestResponse = request.json()
         logger.info("The request response is %s" % requestResponse)
-        return request.status_code,
+        return request.status_code,requestResponse
 
     def updateUserName(self, getuserName, updateUserName):
         getUserNameURLEndPoint = "/v2/user/%s" % getuserName
